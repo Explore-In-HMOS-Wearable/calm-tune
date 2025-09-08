@@ -1,0 +1,7 @@
+export class SongData {
+  id: number = 1;
+  title: string = 'Dream It Possible';
+  artist: string = 'Delacey';
+  artwork: string | Resource = $r('app.media.ic_dream_it');
+  src: string = 'dream_it_possible_delacey';
+}
