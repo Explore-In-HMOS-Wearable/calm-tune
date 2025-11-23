@@ -11,7 +11,7 @@ export const AMBIENCES: string[] = [
 
 export enum AMBIENCE_ENUMS{
   Lofi = 'Lofi',
-  Rain =  'Rain',
+  Rain = 'Rain',
   Coffee_shop = 'Coffee Shop',
   Fireplace = 'Fireplace',
   Waves_ocean = 'Waves / Ocean',

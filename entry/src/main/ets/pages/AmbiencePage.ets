@@ -22,8 +22,7 @@ export struct AmbiencePage {
   ambienceVm : AmbienceViewModel = new AmbienceViewModel()
 
   build() {
-    Stack()
-    {
+    Stack() {
       LoadingProgress()
         .width(60)
         .height(60)
@@ -37,12 +36,8 @@ export struct AmbiencePage {
         .width('100%')
         .height('100%')
         .opacity(0.8)
-        .onError(()=>{
-          console.error("tag","onError")
-        })
-        .onComplete(()=>{
+        .onComplete(() => {
           this.showLoading = !this.showLoading
-          console.error("tag","onComplete")
         })
 
       ArcList({
@@ -73,17 +68,17 @@ export struct AmbiencePage {
           .onClick(() => {
             if (item === AMBIENCE_ENUMS.Lofi) {
               AppStorage.setOrCreate('songList', DataModel.LOFI);
-            } else if(item === AMBIENCE_ENUMS.Rain) {
+            } else if (item === AMBIENCE_ENUMS.Rain) {
               AppStorage.setOrCreate('songList', DataModel.RAIN);
-            } else if(item === AMBIENCE_ENUMS.Coffee_shop) {
+            } else if (item === AMBIENCE_ENUMS.Coffee_shop) {
               AppStorage.setOrCreate('songList', DataModel.COFFEE_SHOP);
-            } else if(item === AMBIENCE_ENUMS.Fireplace) {
+            } else if (item === AMBIENCE_ENUMS.Fireplace) {
               AppStorage.setOrCreate('songList', DataModel.FIREPLACE);
-            }else if(item === AMBIENCE_ENUMS.Waves_ocean) {
+            } else if (item === AMBIENCE_ENUMS.Waves_ocean) {
               AppStorage.setOrCreate('songList', DataModel.WAVES_OCEAN);
-            }else if(item === AMBIENCE_ENUMS.Forest_birds) {
+            } else if (item === AMBIENCE_ENUMS.Forest_birds) {
               AppStorage.setOrCreate('songList', DataModel.FOREST_BIRDS);
-            }else if(item === AMBIENCE_ENUMS.White_noise) {
+            } else if (item === AMBIENCE_ENUMS.White_noise) {
               AppStorage.setOrCreate('songList', DataModel.WHITE_NOISE);
             }
             this.ambienceVm.goToNextPage()

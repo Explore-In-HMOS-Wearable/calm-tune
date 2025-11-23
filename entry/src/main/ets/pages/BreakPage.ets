@@ -29,18 +29,16 @@ export struct BreakPage {
         .fontColor(Color.White)
         .fontSize(48)
         .onTimer((utc: number, elapsedTime: number) => {
-          console.info('textTimer notCountDown utc is: ' + utc + ', elapsedTime: ' + elapsedTime)
           this.currCount = elapsedTime
 
-          if(this.currCount === 1500)
-          {
+          if (this.currCount === 1500) {
             this.musicVm.goToBackPage()
 
             this.textTimerController.reset()
             this.textTimerController.pause()
           }
         })
-        .onAppear(()=>{
+        .onAppear(() => {
           this.textTimerController.start()
         })
         .fontWeight(FontWeight.Bolder)

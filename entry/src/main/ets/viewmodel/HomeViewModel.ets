@@ -1,6 +1,6 @@
-import { DataModel } from "./DataModel";
-import { BaseViewModel } from "./BaseViewModel";
-import { SongData } from "../model/SongData";
+import { DataModel } from './DataModel';
+import { BaseViewModel } from './BaseViewModel';
+import { SongData } from '../model/SongData';
 
 @ObservedV2
 export class HomeViewModel extends BaseViewModel {

@@ -1,4 +1,4 @@
-import { BaseViewModel } from "./BaseViewModel";
+import { BaseViewModel } from './BaseViewModel';
 
 @ObservedV2
 export class AmbienceViewModel extends BaseViewModel {

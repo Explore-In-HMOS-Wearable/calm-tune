@@ -62,21 +62,18 @@ export struct MusicPage {
         .fontColor(Color.White)
         .fontSize(48)
         .onTimer((utc: number, elapsedTime: number) => {
-          console.info('textTimer notCountDown utc is: ' + utc + ', elapsedTime: ' + elapsedTime)
           this.currCount = elapsedTime
 
-          if(this.currCount === 1500)
-          {
-            this.musicVm.goToNextPage()
+          if (this.currCount === 1500) {
 
+            this.musicVm.goToNextPage()
             MediaController.getInstance().release();
             MediaController.clearController()
-
             this.textTimerController.reset()
             this.textTimerController.pause()
           }
         })
-        .onAppear(()=>{
+        .onAppear( () => {
           this.textTimerController.start()
         })
         .fontWeight(FontWeight.Bolder)
@@ -102,8 +99,7 @@ export struct MusicPage {
         .offset({x: 0, y: 68})
         .zIndex(3)
 
-      Row()
-      {
+      Row() {
         Image($r('app.media.back'))
           .width(36)
           .height(36)

@@ -35,9 +35,7 @@ export class MediaController {
       hilog.debug(audioDomain, audioPrefix, `mediaController is undefined in getInstance()`)
       mediaController = new MediaController();
       AppStorage.setOrCreate<MediaController>('mediaController', mediaController);
-      console.error('tag','getinstance media yok')
     }
-    console.error('tag','getinstance media var')
     hilog.debug(audioDomain, audioPrefix, `mediaController is ${mediaController}`)
     return mediaController;
   }
@@ -341,8 +339,7 @@ export class MediaController {
     }
   }
 
-  public static clearController()
-  {
+  public static clearController() {
     let mediaController: MediaController | undefined = AppStorage.get('mediaController');
     if (mediaController) {
 
@@ -355,8 +352,6 @@ export class MediaController {
       AppStorage.delete('selectIndex');
 
       mediaController.reset()
-      console.error('tag','getinstance media silindi')
     }
-    console.error('tag','getinstance media silinmedi')
   }
 }

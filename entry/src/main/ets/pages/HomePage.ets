@@ -8,10 +8,8 @@ export struct HomePage {
   homeVm: HomeViewModel = new HomeViewModel();
 
   build() {
-    Stack({alignContent: Alignment.Center})
-    {
-      Column({space: 8})
-      {
+    Stack({alignContent: Alignment.Center}) {
+      Column({space: 8}) {
         Text('CALMTUNE')
           .fontSize(26)
           .fontWeight(FontWeight.Bolder)
